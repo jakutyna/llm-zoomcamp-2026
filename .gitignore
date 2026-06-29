@@ -4,3 +4,4 @@
 *.db-*
 __pycache__
 HOMEWORK.md
+2-vector-search/homework/models/
