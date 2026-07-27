@@ -1,3 +1,6 @@
+db_init:
+	uv run python db_init.py
+
 run:
 	uv run python generate_data.py
 
