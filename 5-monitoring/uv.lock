@@ -10,6 +10,12 @@ resolution-markers = [
     "python_full_version < '3.14' and sys_platform != 'emscripten' and sys_platform != 'win32'",
 ]
 
+[manifest]
+members = [
+    "homework",
+    "llm-zoomcamp-2025",
+]
+
 [[package]]
 name = "altair"
 version = "6.2.2"
@@ -654,6 +660,29 @@ wheels = [
 ]
 
 [[package]]
+name = "homework"
+version = "0.1.0"
+source = { virtual = "homework" }
+dependencies = [
+    { name = "gitsource" },
+    { name = "minsearch" },
+    { name = "openai" },
+    { name = "opentelemetry-api" },
+    { name = "opentelemetry-sdk" },
+    { name = "python-dotenv" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "gitsource", specifier = ">=0.0.5" },
+    { name = "minsearch", specifier = ">=0.1.0" },
+    { name = "openai", specifier = ">=2.41.0" },
+    { name = "opentelemetry-api", specifier = ">=1.44.0" },
+    { name = "opentelemetry-sdk", specifier = ">=1.44.0" },
+    { name = "python-dotenv", specifier = ">=1.2.2" },
+]
+
+[[package]]
 name = "httpcore"
 version = "1.0.9"
 source = { registry = "https://pypi.org/simple" }
@@ -1251,8 +1280,6 @@ dependencies = [
     { name = "jupyter" },
     { name = "minsearch" },
     { name = "openai" },
-    { name = "opentelemetry-api" },
-    { name = "opentelemetry-sdk" },
     { name = "pandas" },
     { name = "psycopg", extra = ["binary"] },
     { name = "pydantic" },
@@ -1270,8 +1297,6 @@ requires-dist = [
     { name = "jupyter", specifier = ">=1.1.1" },
     { name = "minsearch", specifier = ">=0.1.0" },
     { name = "openai", specifier = ">=2.41.0" },
-    { name = "opentelemetry-api", specifier = ">=1.44.0" },
-    { name = "opentelemetry-sdk", specifier = ">=1.44.0" },
     { name = "pandas", specifier = ">=3.0.3" },
     { name = "psycopg", extras = ["binary"], specifier = ">=3.3.4" },
     { name = "pydantic", specifier = ">=2.13.4" },
